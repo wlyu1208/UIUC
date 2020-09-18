@@ -1,0 +1,5 @@
+v1
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,tetrisBoard:board|color_mapper:boardColored2019|lpm_mult:Mult1|mult_oct:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,tetrisBoard:board|color_mapper:boardColored2019|lpm_mult:Mult0|mult_oct:auto_generated|mac_out2,
+DSP_BALANCING_IMPLEMENTATION,DSP_BLOCKS,tetrisBoard:board|color_mapper:boardColored2019|lpm_mult:Mult2|mult_2dt:auto_generated|mac_out2,
+PORT_SWAPPING,PORT_SWAPPING_FINISHED,tetrisBoard:board|color_mapper:boardColored2019|lpm_mult:Mult1|mult_oct:auto_generated|mac_mult1,

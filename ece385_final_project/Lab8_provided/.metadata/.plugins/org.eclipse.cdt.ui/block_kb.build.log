@@ -1,0 +1,9 @@
+08:34:58 **** Incremental Build of configuration Nios II for project block_kb ****
+make all 
+Info: Building ../block_kb_bsp/
+D:/intelFPGA_lite/18.0/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../block_kb_bsp/
+[BSP build complete]
+[block_kb build complete]
+
+08:34:59 Build Finished (took 1s.6ms)
+

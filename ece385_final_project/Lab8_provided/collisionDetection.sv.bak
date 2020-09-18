@@ -1,0 +1,26 @@
+
+
+module collisionDetection( input 		blockSize,
+									input [9:0] minBlockX,
+									input [9:0] maxBlockX,
+									input [9:0] maxBlockY,
+									input [9:0] currX,
+									input [9:0] currY,
+									input [2:0] controlledShape,
+									input [1:0] controlledState,
+									output canMoveRight,
+									output canMoveLeft,
+									output canMoveDown);
+			
+
+
+
+
+
+
+
+
+
+
+			
+endmodule
