@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/title"
+        android:text="Message"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_centerHorizontal="true"
+        android:textColor="#000000"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Phone Number : "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/title"
+        android:id="@+id/number_txt"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/number_data"
+        android:layout_toRightOf="@+id/number_txt"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/number_txt"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Text : "
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_below="@+id/number_txt"
+        android:id="@+id/message_txt"/>
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/text_data"
+        android:layout_toRightOf="@+id/message_txt"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/message_txt" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADD / SEND"
+        android:id="@+id/add_message"
+        android:layout_below="@id/text_data"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW ALL"
+        android:id="@+id/view_messages"
+        android:layout_toRightOf="@id/add_message"
+        android:layout_below="@+id/text_data"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="VIEW IN RECYCLER VIEW"
+        android:id="@+id/view_recycler"
+        android:layout_toRightOf="@+id/view_messages"
+        android:layout_below="@+id/text_data"/>
+
+
+</RelativeLayout>
