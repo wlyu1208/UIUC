@@ -1,0 +1,47 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+<body>
+    <div class="null">
+    </div>
+    <div class="smallerlogo" onclick="location.href='../';">
+        <br>
+    </div>
+
+<div class="block bg1 text-center">
+<h1>Drinks</h1>
+
+<table class="text-center" style="width:70%; line-height:2; margin-left:auto;margin-right:auto;">
+<thead>
+<tr style="font-size:20px; color: #FFC000;">
+<td>ID</td>
+<td>Name</td>
+<td>View</td>
+<td>Edit</td>
+<td>Delete</td>
+</tr>
+</thead>
+<tbody>
+
+    {% for drink in item %}
+        <tr>
+        <td> {{ drink.6 }}</td>
+        <td> {{ drink.0 }}</td>
+        <td><a href="{% url "drink_view" drink.6 %}">view</a></td>
+        <td><a href="{% url "drink_edit" drink.6 %}">edit</a></td>
+        <td><a href="{% url "drink_delete" drink.6 %}">delete</a></td>
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+</div>
+
+
+<div class="block bg2 text-center">
+    <h1> Why not add a drink?</h1><br>
+    <a href="{% url "drink_new" %}">Add Drink</a>
+</div>
+</body>

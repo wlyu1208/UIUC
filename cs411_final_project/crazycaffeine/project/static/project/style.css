@@ -1,0 +1,83 @@
+body {
+		background-color:#FFC000 !important;
+	}
+
+.inputB{
+  width: 50%;
+  padding: 12px 20px;
+  margin: 18px 10px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.null
+{
+	background-color: #FFC100;
+	height: 50px;
+}
+.logo {
+	background-color: #FFC000;
+	background-image:url('image/title3.png');
+	background-size:contain;
+	background-position:center center;
+	background-repeat:no-repeat;
+	vertical-align: middle;
+	padding: 150px 200px 50px 200px;
+	min-height:50%;
+	
+	cursor:pointer;
+}
+
+.bg1{
+	color: white;
+	background-color:#2d569c;
+	padding: 50px 50px;
+	padding-bottom: 70px;
+	}
+
+	.bg2{
+	padding: 50px 50px;
+
+	padding-bottom: 70px;
+	}
+
+label{
+	font-size:25px;
+}
+.smallerlogo
+{
+
+	cursor:pointer;
+	background-color: #FFC000;
+	background-image:url('image/title3.png');
+	background-size:contain;
+	background-position:center center;
+	background-repeat:no-repeat;
+	min-height:20%;
+}
+
+.block{
+	font-family: 'Patua One', cursive;
+	font-size: 20px;
+}
+
+button, input[type=submit] {
+	color: white !important;
+		background-color: #2d569c;
+  	border: none;
+ 	 border-radius: 6px;
+  	cursor: pointer;
+  	padding: 10px 30px;
+  	font-size: 30px;
+  	font-color: white;
+}
+.HomeButton {
+ margin-top:0px;
+  padding: 30px 70px;
+  font-size: 35px !important;
+}
+
+button:hover, input[type=submit]:hover {
+  background-color: #527fcc;
+}

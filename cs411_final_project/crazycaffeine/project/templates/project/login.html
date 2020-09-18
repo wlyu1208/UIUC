@@ -1,0 +1,39 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+<style>
+	p{
+		color: red;
+	}
+</style>
+<body>
+	<div class="null">
+	</div>
+	<div class="smallerlogo" onclick="location.href='../';">
+	</div>
+	<div class="block text-center">
+<form action="" method="post">
+	{% csrf_token %}
+	<label for="Id"><b>Username</b></label><br>
+	<input class="inputB" id="user_id" type="text" placeholder="Enter Username" name="user_id" maxlength="16" required><br>
+
+	<label for="password"><b>Password</b></label><br>
+	<input class="inputB" id="password" placeholder="Enter Password" type ="text" name="password" maxlength="20" required><br>
+
+<button class="inputB" type="submit">Sign In</button>
+
+
+{% if invalid %}
+<p> No such User! </p>
+{% endif %}
+
+{% if wrong_pwd %}
+<p> Wrong Password! </p>
+{% endif %}
+</form>
+	</div>
+
+</body>

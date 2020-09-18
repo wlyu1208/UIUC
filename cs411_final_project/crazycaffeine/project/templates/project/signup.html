@@ -1,0 +1,51 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<style>
+	input{
+		width:100%;
+  display: block;
+  border: 1px solid #ccc;
+  padding-left:2%;
+  box-sizing: border-box;
+	}
+</style>
+<body>
+	<div class="null">
+	</div>
+	<div class="smallerlogo" onclick="location.href='project';">
+	</div>
+	<div class="block" style="width:50%;margin:auto;margin:auto;;">
+<form class="text-center" action="" method="post">
+	{% csrf_token %}
+	<label for="user_id"> User Id: </label>
+	<input id="user_id" type="text" name="user_id" maxlength="16" placeholder="Enter UserId" required>
+	<label for="password">Password: </label>
+    <input id="password" type ="text" name="password" maxlength="20" placeholder="Enter Password"required>
+    <label for="name"> Full Name: </label>
+	<input id="name" type="text" name="name" maxlength="30" placeholder="Enter Username"required>
+	<label for="drink_name">Drink Name: </label></br>
+	<select name="drink_name" id="drink_name">
+		{% for drink in item %}
+			<option value="{{drink.0}}">{{drink.0}}
+			</option>
+	{% endfor %}
+	</select> </br>
+    <label for="gender"> Gender (M/F): </label>
+	<input id="gender" type="text" name="gender" maxlength="1" placeholder="Enter Gender" required>
+	<label for="height">Height (inches): </label>
+    <input id="height" type ="text" name="height" maxlength="3" placeholder="Enter Height" required>
+    <label for="weight"> Weight (pounds): </label>
+	<input id="weight" placeholder="Enter Weight"type="text" name="weight" maxlength="3" required>
+	<label for="age">Age: </label>
+    <input id="age" type ="text" name="age" placeholder="Enter Age"maxlength="2" required>
+    <label for="is_pregnant"> Are You Pregnant (1=Yes/0=No): </label>
+	<input id="is_pregnant" type="text" name="is_pregnant" maxlength="1" required>
+	<br>
+<button class="inputB" style="width:100%; margin:auto;" type="submit">Sign Up</button>
+</form>
+	</div>
+
+</body>

@@ -1,0 +1,43 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<body>
+	<div class="null">
+	</div>
+	<div class="smallerlogo" onclick="location.href='../';">
+		<br>
+	</div>
+
+
+<div class="block text-center">
+
+<div class="bg1">
+<h1> Welcome  {{user_id}} ! &#128512; </h1>
+<br>
+Age: {{age}}<br />
+Name: {{name}}<br />
+Drink Name: {{drink_name}}<br />
+Gender: {{gender}}<br />
+Height: {{height}}<br />
+Weight: {{weight}}<br />
+Pregnant: {{pregnant}}
+</div>
+
+<div class="bg3">
+	<h1> Here is some info we've calculated for you, {{name}}! &#128512; </h1>
+	<br>
+	Recommended Amount of Sugar (g): {{rec_sug}}<br />
+	Max Amount of Sugar (g): {{max_sug}}<br />
+	Recommended Amount of Caffeine (mg): {{rec_caf}}<br />
+	Max Amount of Caffeine (mg): {{max_caf}}<br />
+</div>
+
+
+<div class="bg2">
+<h1>Recommendations</h1><br>
+	Low Sugar Drink: {{low_sugar}} <a href="{% url "drink_view" low_sug_id %}">view</a> <br />
+	Low Caffeine Drink: {{low_caff}} <a href="{% url "drink_view" low_caff_id %}">view</a> <br />
+	Drink with Caffeine and Sugar Below Both Levels: {{below_both}} <a href="{% url "drink_view" below_both_id %}">view</a> <br />
+</div>

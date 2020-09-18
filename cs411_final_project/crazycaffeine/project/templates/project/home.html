@@ -1,0 +1,52 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<style>
+div {
+	padding: 30px 70px;
+}
+button {
+ margin-top:0px;
+  padding: 10% 20%;
+  font-size: 150%;
+}
+
+</style>
+<body>
+	<div class="null">
+	</div>
+	<div class="logo">
+	</div>
+	<div class="block text-center">
+    <h2>Welcome to Crazy Caffeine! A CS 411 Final Project</h2>
+    <h3>Have some fun working with users and drinks!</h3>
+    <p>made by <em>Team 23</em></p>
+    <p>Tommy Carver, Jooeun Son, Asha Agrawal, and Won Woo Lyu</p>
+		<div class="row">
+    <div class="col-sm-3">
+      <form action="login" method="get">
+<button>Sign In</button>
+</form>
+    </div>
+    <div class="col-sm-3">
+      <form action="signup" method="get">
+<button>Sign Up</button>
+</form>
+    </div>
+    <div class="col-sm-3">
+    	<form action="drinks" method="get">
+<button>Drink List</button>
+</form>
+    </div>
+    <div class="col-sm-3">
+      <form action="drinks/search" method="get">
+<button>Drink Filter</button>
+</form>
+    </div>
+  </div>
+	</div>
+
+</body>

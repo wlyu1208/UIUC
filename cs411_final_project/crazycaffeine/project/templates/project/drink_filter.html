@@ -1,0 +1,34 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+<body>
+
+    <div class="null">
+    </div>
+    <div class="smallerlogo" onclick="location.href='../';">
+        <br>
+    </div>
+
+
+
+<div class="block text-center">
+<h1 > Drink Filter Page</h1><br>
+
+<form action="" style="color:black" method="post">
+	{% csrf_token %}
+	<label for="drink_name">Drink Name Contains ('None' if you don't filter): </label>
+	<input id="drink_name" type="text" name="drink_name" maxlength="16" required><br>
+    <label for="mg_caff">Milligrams of Caffeine Less Than (0 if you dont want filter): </label>
+	<input id="mg_caff" type="text" name="mg_caff" maxlength="16" required><br>
+    <label for="g_sug">Grams of Sugar Less Than (0 if you don't want filter): </label>
+	<input id="g_sug" type="text" name="g_sug" maxlength="16" required><br>
+	<input  type="submit" name="signIn" value="Filter All Drinks!">
+</form>
+</div>
+
+
+
+</body>

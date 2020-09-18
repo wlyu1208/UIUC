@@ -1,0 +1,26 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+<style>
+	form {
+		display:block;
+	}
+</style>
+<body class="block text-center">
+		<div class="null">
+	</div>
+	<div class="smallerlogo" onclick="location.href='../';">
+		<br>
+	</div>
+	<h1>Delete Drink?</h1>
+<form action="" method="post">{% csrf_token %}
+    Are you sure you want to delete "{{ drink.0 }}" ?
+    <br><br>
+    <input  type="submit" value="Submit" />
+</form>
+
+
+
+</body>

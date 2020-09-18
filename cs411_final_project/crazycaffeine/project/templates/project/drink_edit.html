@@ -1,0 +1,33 @@
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Patua+One&display=swap" rel="stylesheet">
+
+<body class = "text-center block">
+	<div class="null">
+	</div>
+	<div class="smallerlogo" onclick="location.href='../';">
+	</div>
+	<br>
+	<h1> Drink Create And Edit Page</h1><br>
+<form action="" method="post">
+	{% csrf_token %}
+	<label for="drink_name">Drink Name: </label>
+	<input id="drink_name" type="text" name="drink_name" maxlength="16" required><br>
+	<label for="fl_oz">Fluid Ounces: </label>
+      <input id="fl_oz" type ="text" name="fl_oz" maxlength="20" required><br>
+      <label for="mg_caffeine">Milligrams of Caffeine: </label>
+	<input id="mg_caffeine" type="text" name="mg_caffeine" maxlength="16" required><br>
+	<label for="mg_floz">Milligrams of Caffeine per Fluid Ounce: </label>
+      <input id="mg_floz" type ="text" name="mg_floz" maxlength="20" required><br>
+      <label for="g_sugar">Grams of Sugar: </label>
+	<input id="g_sugar" type="text" name="g_sugar" maxlength="16" required><br>
+	<label for="g_floz">Grams of Sugar per Fluid Ounce: </label>
+      <input id="g_floz" type ="text" name="g_floz" maxlength="20" required><br>
+	<label for="id">id </label>
+      <input id="id" type ="text" name="id" maxlength="20" required><br><br>
+	<input type="submit" name="signIn" value="Submit Drink">
+</form>
+
+</body>
