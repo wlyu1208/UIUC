@@ -1,0 +1,101 @@
+Buglog for Checkpoint 1: 
+
+Bug 1: Problem: OS not booting ( Triple fault ) 
+       Fix: GDT initialization was incorrect by not padding before getting poitner of gdt descriptor
+       Time: 2 hour 
+
+Bug 2: Problem: keyboard interrupt not working 
+       Fix: PIC was not working correctly
+            -In PIC, master and slave port were not initialized correctly
+            -In PIC, bitmask needed to be add one after shifting, but did not add
+            -In PIC, did not enable slave irq
+            -keryboard interrupt variable was used as c function, not assembly code so did not work
+                -need to save flag and register and call print function inside assembly code and pass poitner
+            -Due to these errors, initialization of keyboard worked fine, but printing character was not functioning
+       Time: 4 hours
+
+Bug 3: Problem: initialization of paging leads to triple fault
+       Description: This is caused by the random order of initialization of control register. CR3 should starts before 
+                    CR0 because when CR0 is set, paging is allowed and what CR3 contains right now is supposed to be the 
+                    correct address of page directory, which is not true. CR3 has not been initialized yet and contains
+                    random data so some unknown exception(maybe the illegal memory access) would occur. Since the exception
+                    is usually "triple fault" or "double fault", you don't get much insight into the bug in the code.
+                    So it takes long time to debug. This bug is finally fixed by putting CR3 initialization before CR0.
+       Time: my whole sunday afternoon!!!!
+
+Bug 4: Problem: "" is an array of char while '' is a single char.
+       Fix: obvious
+       Time: several ten minutes. 
+
+Buglog for Checkpoint 2:
+
+Bug 5: Problem: incorrect address when accessing dblocks for read_data
+       Fix: used uint8_t instead of uint32_t for dblock addrs for inode struct, causing incorrect
+            struct size
+       Time: 10 min
+Bug 6: Problem: When pressed alt key, prints out the character last printed when there should be nothing to print
+       Fix: Initially there was a exter case on function in keyboard.c where it returns 0 if alt key is pressed, but it prints out 
+	past character, so fixed to literally do nothing and not get any data from table if alt is pressed 
+       Time: 20 min
+       
+Bug 7: Problem: Terminal read function works fine when integrated in the keyboard but doesn't work in the test.
+        Fix: It is because we use a table in keyboard handler, the type of element in the table is char obviously, but when
+        I test it I define an array of integer. The integer is 16 bits long, larger than char. So when I put the integer in the array
+        linearly, the buffer is read as "1 0 0 0 2 0 0 0" where 1 and 2 is the element data. So the terminal_read function which output 
+        buffer by using function "puts" will return after reading the first 0 after 1. That's why only one single input is printed.
+        Time: 2 hours.
+Bug 8: Problem: Keyboard buffer add empty char to the end after the size reach the limitation. So I need to press backspace twice to delete 
+        the last character if the buffer overflow.
+        Fix: This because I mix the concept of index and size. I use a variable buffer_index to represent both index and size implictly in 
+        several occasions, which leads to bugs when buffer overflows. This takes time to fix but the way to fix is simple: simply define the 
+        buffer_index as index and change the comparison of buffer_index and size to buffer_index and size-1.
+        Time: 1 hour.
+Bug 9: Problem: terminal_read function will ignore keyboard buffer overflow if I press enter after overflow and enter something else and press
+        enter again.
+        Fix: I think there is uncertainty in the instruction so I generalize all cases of terminal read to one. Simply copy the keyboard buffer
+        to the temrinal buffer and replace the last termination character 0 with \n and add 0. Don't add \n in the keyboard buffer because
+        we don't need to add that if we initialize keyboard buffer after pressing enter. 
+        Time: 1 hour.
+
+Buglog for Checkpoint 3:
+Bug 10: Problem: Execute completely not working (triple fault)
+        Fix 1: Fix where we save esp/ebp in the pcb, so that the program will return to the correct location
+        Fix 2: Memory offsets were wrong, fixed offsets based off PID and used correct multiplier
+        Fix 3: Fix artificial IRET content so that can return to program correctly on halt
+        Time: 4 hours total
+
+Bug 11: Problem: Unable to halt program upon completion (page fault)
+        Fix 1: Restore tss esp0 so upon return program is in virtual memory again
+        Fix 2: Parent PCB pointer not properly set in execute (assigned to pcb before calculating)
+        Time: Fix 1 (1 hour), Fix 2 (4 hours for 1 line!!!)
+
+Buglog for Checkpoint 4:
+Bug 12: Problem: Grep sometimes gets all file, but sometimes does not get all files or just few files
+	Fix: For pcb, struct needs another buffer as argument buffer since command buffer inside PCB gets wrong values.
+	Time: 2 hour
+
+Buglog for Checkpoint 5:
+Bug 13: Problem: Scheduling triple faults
+                Sub-problem: Trying to context switch into another terminal which doesn't have a process running
+                and does not have an IRET stack set up, causing corrupted stack and instructions
+                Fix: Execute all shells at beginning of program, building iret context with execute
+                Time: 3 hours (design)
+
+                Sub-problem: Mapping virtual memory to video buffers page faults and causes corrupted pointers
+                Fix: properly page virtual memory to video buffer/video memory in physical memory
+                Time: 1 hour
+
+                Sub-problem: More page faults!
+                Fix: tss.esp0 not properly set
+                Time: 1 hour
+
+Bug 14: Problem: Not using virtual video memory at all
+        Fix: Page virtual video memory and buffers properly to its physical locations.
+        Painstakingly change every single pointer in terminal.c to point to virtual memory.
+        Write brand-new print functions to use correct virtual video memory locations.
+        Time: 4 hours
+
+Bug 15: Problem: Running cat rtc would affect other programs
+        Fix: Deleted code in rtc_open, fixed a lot of problems in virt rtc with logic and design
+        Time: 2 hours
+
