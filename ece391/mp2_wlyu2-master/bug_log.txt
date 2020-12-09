@@ -1,0 +1,95 @@
+MP2- Bug Log
+Won Woo Lyu
+
+MP2.1
+Draw_vert_line
+	-mixed of vertical lines appeared with mixed planes of image
+	-solution: off set need fixed x, not show_x, and 
+	address needed to be add by scroll_x_width in the loop
+
+ Status Bar Drawing
+	-Upper part of screen divided with incorrect size
+	-solution: correct value on 18th register and 7th register for 7 bits and 8th bit
+
+	-Draw on status bar with color keep made warning over 
+	using function that was modified with static copy_image function
+	-solution: make modified function as void or make static modified function 
+	outside of #if !defined(TEXT_RESTORE_PROGRAM) because of set up on the makefile
+
+	-During the test on printing string on status bar, mixed colors appeared on status bar 
+	like raining and bottom line had different colors
+	-solution: Initially had printing status bar insided of loop where buffer got values, but took
+	the loop outside and solved the problem.
+
+	-String on the status bar kept print on the first line.
+	-solution: need to add status width to start from the second line of the bar on changing buff data
+
+	-String kept written on left to the center, not right on the center
+	-solution: wrong formula by divided formula first and multiply 
+	back again on index not just sbtracting 40 characters from string length.
+	If string length has odd number, need divide to lower like 4.5 to 4.
+
+Status Bar Synchronization
+	-Status Bar had a lot of delays when print commands and print status message
+	-solution: there was unnecessary function call inside of loop that made loop to 
+	inside of loop, correctly put buffer data even with looping twice, but made synchronization
+	a lot slow
+
+MP2.2
+Octree Algorithm
+Pixel Color dominate by Brown
+	-compareMyType order was wrong. If compare operate opposite, than color gets dominate
+	by brown color and pixel image becomes dark with wrong sorting or sometimes, it got
+	segmentation fault, with wrong index by thinkin that comparator was right. Need high subtract
+	low on the comparator.
+Getting index for level sorted kept segmentation faulted.
+	-I saved index of level two and four on same struct which also made index to sort. To find out,
+	I created a another array that only has index of level four and used that to call level four palette index.
+Image came out as black
+	-happened by segmentation fault by trying to change pixel of image without changing data
+	of image pixel into level four index and use to most use pixel on result array
+Some Pixels have very different color like dominate by light color of RGB
+	-if pixel of r g b for level two and level four save by just make shifting to make two or four
+	make average different and change the color of image. Need to save r g b value itself
+	by shifting some bit and & with fixed bit. 
+Image came out but some colors came and dark on some place like empty space
+	-first used result of most used RGB to be only 128 size since thought we only needed 128,
+	but have to consider rest of 4096-128 RGB because have to fill rest with left RGB, so fixed
+	after making most used RGB to size of 4096 (Level four size)
+Image seems to be dark by not shifting when putting on palette.
+	-when final rgb gets into the palette, it needs to be shift by 1 to make 6:6:6, but by not doing this
+	image printed out color was very dark. Instead of shifting, I just added itself and solve the problem
+	to make 6 bits.
+
+Tuxctl with input.c
+Only packet got received and printed and fixed but could not find problem
+	-everytime I make change, I only did sudo codes not make, which made me to keep program same wrong
+	object.
+After ioctl initiated, Buttons were changed and can view through package print statement, but
+stuck on the while loop
+	-had to get rid of some code on the input.c that was for using keyboard. commenting them solved
+After switch, LED printed really weird segments 
+	-while testing and print variables, I messed up few variable like adding big number 
+	which affected LED to light weird stuff
+After make input.c, I got errors of that variables are not declared and unused.
+	-I halted the kernel and reopened and restarted the program. Still do now know what got wrong.
+Starting using tuxctl, kernel keeps gotten freeze
+	-Use 0x3f8 to pull byte from UART like in. sometimes This did not work so thoguht kernel was the problem,
+	but my .c files were wrong and got error which made freeze on compile. 
+Put LED after the reset was not happening at all.
+	-Instead of doing it on reset, do it on ack by setting flag.
+
+PThread in adventure.c
+Trying to put only clock, screen shakes a lot and image keeps changing fast
+	-there were printf statements on tuxctl files that keep interacting with
+	img to print out. after getting rid of print statements, solved.
+Time index was wrong
+	-correct index was to tick.sec - start.sec but kept using start - tick and used micro sec
+I made previous command and current command to be same
+	-which made img sometime to stuck when keep pressed on the same directiong
+I made switch and keyboard to act together on move RLUD
+	-i set the flag to not move keyboard when moved by tux controller. Not making this movement to
+	speed up and go diagnol sometime.
+When key is not pressed, I had to keep wake pthread and make prev command to nothing
+	-not doing this made some switches to not work, and fixed after setting pthred to wake up and 
+	save prev command to nothing when key is not pressed.
