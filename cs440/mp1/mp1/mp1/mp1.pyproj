@@ -1,0 +1,65 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>76a26edb-ac31-406f-ac71-afdb01d450cf</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>mp1.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>mp1</Name>
+    <RootNamespace>mp1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="agent.py" />
+    <Compile Include="maze.py" />
+    <Compile Include="mp1.py" />
+    <Compile Include="search.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".DS_Store" />
+    <Content Include="map\.DS_Store" />
+    <Content Include="map\corner\bigCorners.txt" />
+    <Content Include="map\corner\mediumCorners.txt" />
+    <Content Include="map\corner\tinyCorners.txt" />
+    <Content Include="map\multi\bigSearch.txt" />
+    <Content Include="map\multi\greedySearch.txt" />
+    <Content Include="map\multi\mediumDottedMaze.txt" />
+    <Content Include="map\multi\mediumSearch.txt" />
+    <Content Include="map\multi\oddSearch.txt" />
+    <Content Include="map\multi\openSearch.txt" />
+    <Content Include="map\multi\smallSearch.txt" />
+    <Content Include="map\multi\tinySearch.txt" />
+    <Content Include="bigMaze.txt" />
+    <Content Include="mediumMaze.txt" />
+    <Content Include="openMaze.txt" />
+    <Content Include="part4.txt" />
+    <Content Include="smallMaze.txt" />
+    <Content Include="tinyMaze.txt" />
+    <Content Include="README.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="map\" />
+    <Folder Include="map\corner\" />
+    <Folder Include="map\multi\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
