@@ -133,7 +133,7 @@ class Agent:
         #update q_table
         #Q(s,a) += alpha(reward + gamma * max(curr round s, curr round a) - Q(s,a))
         #Q(s,a) : 
-        if self.s is not None and self.a is not None:
+        if self.s is not None and self.a is not None and self._train:
             max_q = -math.inf
             prev_s = self.s
 
@@ -168,12 +168,12 @@ class Agent:
                 index_action = each_act
             else:
                 current_q = self.Q[current_state[0], current_state[1],current_state[2], current_state[3],current_state[4], current_state[5],current_state[6], current_state[7], each_act]
-                if current_q > max_q:
+                if current_q >= max_q:
                     max_q = current_q
                     index_action = each_act
                     
         self.N[current_state[0], current_state[1],current_state[2], current_state[3],current_state[4], current_state[5],current_state[6], current_state[7], index_action] += 1
-        self.s = (current_state)
+        self.s = current_state
         self.points = points
         self.a = index_action
            
