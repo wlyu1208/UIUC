@@ -1,0 +1,68 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>80af9041-e0a6-423e-b36b-f8784918e919</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <StartupFile>
+    </StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <Name>DL_1</Name>
+    <RootNamespace>DL_1</RootNamespace>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="data_process.py" />
+    <Compile Include="kaggle_submission.py" />
+    <Compile Include="models\Logistic.py" />
+    <Compile Include="models\Perceptron.py" />
+    <Compile Include="models\Softmax.py" />
+    <Compile Include="models\SVM.py" />
+    <Compile Include="models\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include=".ipynb_checkpoints\" />
+    <Folder Include="cifar10\" />
+    <Folder Include="models\" />
+    <Folder Include="models\__pycache__\" />
+    <Folder Include="mushroom\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include=".DS_Store" />
+    <Content Include=".ipynb_checkpoints\CS 498DL Assignment-1-checkpoint.ipynb" />
+    <Content Include="cifar10\.DS_Store" />
+    <Content Include="cifar10\get_datasets.sh" />
+    <Content Include="CS 498DL Assignment-1.ipynb" />
+    <Content Include="models\__pycache__\Logistic.cpython-37.pyc" />
+    <Content Include="models\__pycache__\Perceptron.cpython-37.pyc" />
+    <Content Include="models\__pycache__\Softmax.cpython-37.pyc" />
+    <Content Include="models\__pycache__\SVM.cpython-37.pyc" />
+    <Content Include="models\__pycache__\__init__.cpython-37.pyc" />
+    <Content Include="mushroom\.DS_Store" />
+    <Content Include="mushroom\.split.py.swp" />
+    <Content Include="mushroom\mushrooms.csv" />
+    <Content Include="mushroom\X_test.npy" />
+    <Content Include="mushroom\X_train.npy" />
+    <Content Include="mushroom\y_test.npy" />
+    <Content Include="mushroom\y_train.npy" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+  <!-- Uncomment the CoreCompile target to enable the Build command in
+       Visual Studio and specify your pre- and post-build commands in
+       the BeforeBuild and AfterBuild targets below. -->
+  <!--<Target Name="CoreCompile" />-->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+</Project>
