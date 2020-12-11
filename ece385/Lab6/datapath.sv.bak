@@ -1,0 +1,5 @@
+module datapath(input logic GateMARMUX, GatePC, GateALU, GateMDR
+					 input logic[15:0] 
+					 output logic[15:0] D);
+
+endmodule

@@ -1,0 +1,11 @@
+module two_mux(input logic[1:0] selec,
+					input logic[15:0] s0, s1,
+					output logic[15:0] out);
+always_comb
+begin
+	if(selec==2'b00)
+		out=s0;
+	else
+		out=s1;
+end
+endmodule

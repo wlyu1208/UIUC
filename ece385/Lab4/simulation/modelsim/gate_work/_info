@@ -1,0 +1,86 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/ECE385/Lab4/simulation/modelsim
+vhard_block
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1550017977
+!i10b 1
+!s100 eTjkEC?dI4^YOILGb02hG3
+I5nHW;NG<Q5c`JYJ=6B^2m2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+Z4 !s105 logic8bit_7_1200mv_85c_slow_svo_unit
+S1
+R0
+Z5 w1549375894
+Z6 8logic8bit_7_1200mv_85c_slow.svo
+Z7 Flogic8bit_7_1200mv_85c_slow.svo
+L0 3452
+Z8 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z9 !s108 1550017977.000000
+Z10 !s107 logic8bit_7_1200mv_85c_slow.svo|
+Z11 !s90 -reportprogress|300|-sv|-work|work|+incdir+.|logic8bit_7_1200mv_85c_slow.svo|
+!i113 1
+Z12 o-sv -work work
+Z13 !s92 -sv -work work +incdir+.
+Z14 tCvgOpt 0
+vProcessor
+R1
+R2
+!i10b 1
+!s100 3KjONMze_>gn:YAl7<k]10
+IbnlV^b6Qfl=IQeCV>^=mD2
+R3
+R4
+S1
+R0
+R5
+R6
+R7
+L0 31
+R8
+r1
+!s85 0
+31
+R9
+R10
+R11
+!i113 1
+R12
+R13
+R14
+n@processor
+vtestbench
+R1
+!s110 1550017978
+!i10b 1
+!s100 ;J9O9OfMjMmYJ>Z^?Wd]Z1
+IO:j[:L4^4UgSXB4=AKO:g3
+R3
+!s105 testbench_8_sv_unit
+S1
+R0
+w1410636164
+8D:/ECE385/Lab4/logic_processor_4bit/testbench_8.sv
+FD:/ECE385/Lab4/logic_processor_4bit/testbench_8.sv
+L0 1
+R8
+r1
+!s85 0
+31
+R9
+!s107 D:/ECE385/Lab4/logic_processor_4bit/testbench_8.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+D:/ECE385/Lab4/logic_processor_4bit|D:/ECE385/Lab4/logic_processor_4bit/testbench_8.sv|
+!i113 1
+R12
+!s92 -sv -work work +incdir+D:/ECE385/Lab4/logic_processor_4bit
+R14

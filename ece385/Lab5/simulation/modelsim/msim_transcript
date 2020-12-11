@@ -1,0 +1,151 @@
+# Reading D:/intelFPGA_lite/modelsim_ase/tcl/vsim/pref.tcl
+# do 8bitmultiplier_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/Control.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:19 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/Control.sv 
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/reg_unit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/reg_unit.sv 
+# -- Compiling module register_unit
+# -- Compiling module reg_8
+# 
+# Top level modules:
+# 	register_unit
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/flip_flop.sv 
+# -- Compiling module flipflop
+# 
+# Top level modules:
+# 	flipflop
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/nineadder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/nineadder.sv 
+# -- Compiling module ninebitadder
+# -- Compiling module fulladder
+# 
+# Top level modules:
+# 	ninebitadder
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/sync.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/sync.sv 
+# -- Compiling module sync
+# -- Compiling module sync_r0
+# -- Compiling module sync_r1
+# 
+# Top level modules:
+# 	sync
+# 	sync_r0
+# 	sync_r1
+# End time: 20:21:20 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/processor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:20 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/processor.sv 
+# -- Compiling module processor
+# 
+# Top level modules:
+# 	processor
+# End time: 20:21:21 on Feb 19,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/ECE385/Lab5 {D:/ECE385/Lab5/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 20:21:21 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/Lab5" D:/ECE385/Lab5/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 20:21:21 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 20:21:21 on Feb 19,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.processor
+# Loading work.control
+# Loading work.reg_8
+# Loading work.ninebitadder
+# Loading work.fulladder
+# Loading work.flipflop
+# Loading work.HexDriver
+# Loading work.sync
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[0] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[1] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[2] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[3] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[4] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[5] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[6] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# ** Warning: (vsim-3017) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Too few port connections. Expected 3, found 2.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/Sw_sync[7] File: D:/ECE385/Lab5/sync.sv
+# ** Warning: (vsim-3722) D:/ECE385/Lab5/processor.sv(41): [TFMPC] - Missing connection for port 'q'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 1000 ns
+# ** Warning: (vsim-8315) D:/ECE385/Lab5/Control.sv(24): No condition is true in the unique/priority if/case statement.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/processor0/CTRL
+# ** Warning: (vsim-8315) D:/ECE385/Lab5/Control.sv(24): No condition is true in the unique/priority if/case statement.
+#    Time: 10 ns  Iteration: 2  Instance: /testbench/processor0/CTRL
+#           2 error(s) detected. Try again!
+# End time: 20:22:16 on Feb 19,2019, Elapsed time: 0:00:55
+# Errors: 0, Warnings: 18

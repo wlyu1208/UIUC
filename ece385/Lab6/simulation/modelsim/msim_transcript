@@ -1,0 +1,205 @@
+# Reading D:/intelFPGA_lite/modelsim_ase/tcl/vsim/pref.tcl
+# do lab6_lc3_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/flip_flop.sv 
+# -- Compiling module flip_flop
+# 
+# Top level modules:
+# 	flip_flop
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/four_one_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/four_one_mux.sv 
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	four_mux
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/two_one_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/two_one_mux.sv 
+# -- Compiling module two_mux
+# 
+# Top level modules:
+# 	two_mux
+# End time: 08:04:50 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:50 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:51 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:51 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:51 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:51 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018 {D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 08:04:51 on Feb 19,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018" D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 08:04:51 on Feb 19,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 08:04:51 on Feb 19,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.slc3
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.flip_flop
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# ** Warning: (vsim-3017) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Too few port connections. Expected 18, found 17.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0 File: D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/datapath.sv
+# ** Warning: (vsim-3722) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Missing connection for port 'mar_z'.
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2000 ns
+add wave -position end  sim:/testbench/L6/my_slc/GatePC
+add wave -position end  sim:/testbench/L6/my_slc/GateMDR
+add wave -position end  sim:/testbench/L6/my_slc/GateALU
+add wave -position end  sim:/testbench/L6/my_slc/GateMARMUX
+add wave -position end  sim:/testbench/L6/my_slc/MAR
+add wave -position end  sim:/testbench/L6/my_slc/MDR
+add wave -position end  sim:/testbench/L6/my_slc/IR
+add wave -position end  sim:/testbench/L6/my_slc/PC
+restart -f
+# ** Warning: (vsim-3017) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Too few port connections. Expected 18, found 17.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0 File: D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/datapath.sv
+# ** Warning: (vsim-3722) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Missing connection for port 'mar_z'.
+run 200ns
+restart -f
+# ** Warning: (vsim-3017) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Too few port connections. Expected 18, found 17.
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0 File: D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/datapath.sv
+# ** Warning: (vsim-3722) D:/ECE385/lab6/ECE385_lab6_provided_Spring_2018/Updated_ECE385_lab6_provided_Spring_2018/slc3.sv(77): [TFMPC] - Missing connection for port 'mar_z'.
+run 2000ns
+# End time: 08:08:30 on Feb 19,2019, Elapsed time: 0:03:39
+# Errors: 0, Warnings: 6

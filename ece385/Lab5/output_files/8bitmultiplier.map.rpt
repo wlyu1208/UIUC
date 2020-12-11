@@ -1,0 +1,505 @@
+Analysis & Synthesis report for 8bitmultiplier
+Tue Feb 19 19:23:08 2019
+Quartus Prime Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. State Machine - |processor|control:CTRL|curr_state
+  9. Registers Removed During Synthesis
+ 10. General Register Statistics
+ 11. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 12. Port Connectivity Checks: "sync:Sw_sync[7]"
+ 13. Port Connectivity Checks: "sync:Sw_sync[6]"
+ 14. Port Connectivity Checks: "sync:Sw_sync[5]"
+ 15. Port Connectivity Checks: "sync:Sw_sync[4]"
+ 16. Port Connectivity Checks: "sync:Sw_sync[3]"
+ 17. Port Connectivity Checks: "sync:Sw_sync[2]"
+ 18. Port Connectivity Checks: "sync:Sw_sync[1]"
+ 19. Port Connectivity Checks: "sync:Sw_sync[0]"
+ 20. Port Connectivity Checks: "ninebitadder:S0|fulladder:fa8"
+ 21. Port Connectivity Checks: "control:CTRL"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2018  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Tue Feb 19 19:23:08 2019       ;
+; Quartus Prime Version              ; 18.0.0 Build 614 04/24/2018 SJ Lite Edition ;
+; Revision Name                      ; 8bitmultiplier                              ;
+; Top-level Entity Name              ; processor                                   ;
+; Family                             ; Cyclone IV E                                ;
+; Total logic elements               ; 95                                          ;
+;     Total combinational functions  ; 80                                          ;
+;     Dedicated logic registers      ; 38                                          ;
+; Total registers                    ; 38                                          ;
+; Total pins                         ; 57                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE115F29C7      ;                    ;
+; Top-level entity name                                            ; processor          ; 8bitmultiplier     ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                     ;
++----------------------------------+-----------------+------------------------------+------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path ; Library ;
++----------------------------------+-----------------+------------------------------+------------------------------+---------+
+; Control.sv                       ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/Control.sv    ;         ;
+; HexDriver.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/HexDriver.sv  ;         ;
+; reg_unit.sv                      ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/reg_unit.sv   ;         ;
+; flip_flop.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/flip_flop.sv  ;         ;
+; processor.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/processor.sv  ;         ;
+; nineadder.sv                     ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/nineadder.sv  ;         ;
+; sync.sv                          ; yes             ; User SystemVerilog HDL File  ; D:/ECE385/Lab5/sync.sv       ;         ;
++----------------------------------+-----------------+------------------------------+------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 95        ;
+;                                             ;           ;
+; Total combinational functions               ; 80        ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 66        ;
+;     -- 3 input functions                    ; 7         ;
+;     -- <=2 input functions                  ; 7         ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 80        ;
+;     -- arithmetic mode                      ; 0         ;
+;                                             ;           ;
+; Total registers                             ; 38        ;
+;     -- Dedicated logic registers            ; 38        ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 57        ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 38        ;
+; Total fan-out                               ; 517       ;
+; Average fan-out                             ; 2.23      ;
++---------------------------------------------+-----------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                            ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                      ; Entity Name  ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+--------------+
+; |processor                 ; 80 (4)              ; 38 (0)                    ; 0           ; 0            ; 0       ; 0         ; 57   ; 0            ; |processor                               ; processor    ; work         ;
+;    |HexDriver:HexAL|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|HexDriver:HexAL               ; HexDriver    ; work         ;
+;    |HexDriver:HexAU|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|HexDriver:HexAU               ; HexDriver    ; work         ;
+;    |HexDriver:HexBL|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|HexDriver:HexBL               ; HexDriver    ; work         ;
+;    |HexDriver:HexBU|       ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|HexDriver:HexBU               ; HexDriver    ; work         ;
+;    |control:CTRL|          ; 6 (6)               ; 18 (18)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|control:CTRL                  ; control      ; work         ;
+;    |flipflop:FF0|          ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|flipflop:FF0                  ; flipflop     ; work         ;
+;    |ninebitadder:S0|       ; 18 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0               ; ninebitadder ; work         ;
+;       |fulladder:fa0|      ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa0 ; fulladder    ; work         ;
+;       |fulladder:fa1|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa1 ; fulladder    ; work         ;
+;       |fulladder:fa2|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa2 ; fulladder    ; work         ;
+;       |fulladder:fa3|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa3 ; fulladder    ; work         ;
+;       |fulladder:fa4|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa4 ; fulladder    ; work         ;
+;       |fulladder:fa5|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa5 ; fulladder    ; work         ;
+;       |fulladder:fa6|      ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa6 ; fulladder    ; work         ;
+;       |fulladder:fa7|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa7 ; fulladder    ; work         ;
+;       |fulladder:fa8|      ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|ninebitadder:S0|fulladder:fa8 ; fulladder    ; work         ;
+;    |reg_8:REGA|            ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|reg_8:REGA                    ; reg_8        ; work         ;
+;    |reg_8:REGB|            ; 10 (10)             ; 8 (8)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|reg_8:REGB                    ; reg_8        ; work         ;
+;    |sync:button_sync[0]|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sync:button_sync[0]           ; sync         ; work         ;
+;    |sync:button_sync[1]|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sync:button_sync[1]           ; sync         ; work         ;
+;    |sync:button_sync[2]|   ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |processor|sync:button_sync[2]           ; sync         ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------+--------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; State Machine - |processor|control:CTRL|curr_state                                                                                                                                                                                                                                         ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; Name         ; curr_state.R ; curr_state.Q ; curr_state.P ; curr_state.O ; curr_state.N ; curr_state.M ; curr_state.L ; curr_state.K ; curr_state.J ; curr_state.I ; curr_state.H ; curr_state.G ; curr_state.F ; curr_state.E ; curr_state.D ; curr_state.C ; curr_state.B ; curr_state.A ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+; curr_state.A ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ;
+; curr_state.B ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 1            ;
+; curr_state.C ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 1            ;
+; curr_state.D ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 1            ;
+; curr_state.E ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.F ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.G ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.H ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.I ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.J ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.K ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.L ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.M ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.N ; 0            ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.O ; 0            ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.P ; 0            ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.Q ; 0            ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
+; curr_state.R ; 1            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 0            ; 1            ;
++--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+--------------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; control:CTRL|curr_state~4             ; Lost fanout        ;
+; control:CTRL|curr_state~5             ; Lost fanout        ;
+; control:CTRL|curr_state~6             ; Lost fanout        ;
+; control:CTRL|curr_state~7             ; Lost fanout        ;
+; control:CTRL|curr_state~8             ; Lost fanout        ;
+; Total Number of Removed Registers = 5 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 38    ;
+; Number of registers using Synchronous Clear  ; 8     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 19    ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 16    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|reg_8:REGA|Dout[0] ;
+; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |processor|reg_8:REGB|Dout[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[7]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[6]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[5]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[4]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[3]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[2]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[1]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "sync:Sw_sync[0]"                                                                                         ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                  ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+; q    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------+
+; Port Connectivity Checks: "ninebitadder:S0|fulladder:fa8" ;
++-------+--------+----------+-------------------------------+
+; Port  ; Type   ; Severity ; Details                       ;
++-------+--------+----------+-------------------------------+
+; c_out ; Output ; Info     ; Explicitly unconnected        ;
++-------+--------+----------+-------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "control:CTRL"                                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; fin  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 57                          ;
+; cycloneiii_ff         ; 38                          ;
+;     CLR               ; 19                          ;
+;     ENA               ; 8                           ;
+;     ENA SCLR          ; 8                           ;
+;     plain             ; 3                           ;
+; cycloneiii_lcell_comb ; 84                          ;
+;     normal            ; 84                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 4                           ;
+;         3 data inputs ; 7                           ;
+;         4 data inputs ; 66                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.00                        ;
+; Average LUT depth     ; 3.31                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:00     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 18.0.0 Build 614 04/24/2018 SJ Lite Edition
+    Info: Processing started: Tue Feb 19 19:22:56 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off 8bitmultiplier -c 8bitmultiplier
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file control.sv
+    Info (12023): Found entity 1: control File: D:/ECE385/Lab5/Control.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file hexdriver.sv
+    Info (12023): Found entity 1: HexDriver File: D:/ECE385/Lab5/HexDriver.sv Line: 1
+Info (12021): Found 2 design units, including 2 entities, in source file reg_unit.sv
+    Info (12023): Found entity 1: register_unit File: D:/ECE385/Lab5/reg_unit.sv Line: 1
+    Info (12023): Found entity 2: reg_8 File: D:/ECE385/Lab5/reg_unit.sv Line: 13
+Info (12021): Found 1 design units, including 1 entities, in source file flip_flop.sv
+    Info (12023): Found entity 1: flipflop File: D:/ECE385/Lab5/flip_flop.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file processor.sv
+    Info (12023): Found entity 1: processor File: D:/ECE385/Lab5/processor.sv Line: 3
+Info (12021): Found 2 design units, including 2 entities, in source file nineadder.sv
+    Info (12023): Found entity 1: ninebitadder File: D:/ECE385/Lab5/nineadder.sv Line: 1
+    Info (12023): Found entity 2: fulladder File: D:/ECE385/Lab5/nineadder.sv Line: 31
+Info (12021): Found 3 design units, including 3 entities, in source file sync.sv
+    Info (12023): Found entity 1: sync File: D:/ECE385/Lab5/sync.sv Line: 4
+    Info (12023): Found entity 2: sync_r0 File: D:/ECE385/Lab5/sync.sv Line: 18
+    Info (12023): Found entity 3: sync_r1 File: D:/ECE385/Lab5/sync.sv Line: 39
+Info (12021): Found 1 design units, including 1 entities, in source file testbench.sv
+    Info (12023): Found entity 1: testbench File: D:/ECE385/Lab5/testbench.sv Line: 1
+Info (12127): Elaborating entity "processor" for the top level hierarchy
+Info (12128): Elaborating entity "control" for hierarchy "control:CTRL" File: D:/ECE385/Lab5/processor.sv Line: 15
+Info (12128): Elaborating entity "reg_8" for hierarchy "reg_8:REGA" File: D:/ECE385/Lab5/processor.sv Line: 18
+Info (12128): Elaborating entity "ninebitadder" for hierarchy "ninebitadder:S0" File: D:/ECE385/Lab5/processor.sv Line: 23
+Info (12128): Elaborating entity "fulladder" for hierarchy "ninebitadder:S0|fulladder:fa0" File: D:/ECE385/Lab5/nineadder.sv Line: 18
+Info (12128): Elaborating entity "flipflop" for hierarchy "flipflop:FF0" File: D:/ECE385/Lab5/processor.sv Line: 26
+Info (12128): Elaborating entity "HexDriver" for hierarchy "HexDriver:HexAL" File: D:/ECE385/Lab5/processor.sv Line: 28
+Info (12128): Elaborating entity "sync" for hierarchy "sync:button_sync[0]" File: D:/ECE385/Lab5/processor.sv Line: 40
+Warning (12241): 8 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 5 registers lost all their fanouts during netlist optimizations.
+Info (144001): Generated suppressed messages file D:/ECE385/Lab5/output_files/8bitmultiplier.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 152 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 12 input pins
+    Info (21059): Implemented 45 output pins
+    Info (21061): Implemented 95 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4789 megabytes
+    Info: Processing ended: Tue Feb 19 19:23:08 2019
+    Info: Elapsed time: 00:00:12
+    Info: Total CPU time (on all processors): 00:00:25
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/ECE385/Lab5/output_files/8bitmultiplier.map.smsg.
+
+
