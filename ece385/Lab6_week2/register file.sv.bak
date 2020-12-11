@@ -1,0 +1,13 @@
+module Reg_f(input logic Clk, Reset, LD_REG,
+				 input logic[15:0] in,
+				 output logic[15:0] sr2_out, sr1_out,
+				 input logic[2:0] sr2, dr_m, sr1_m);
+				 
+always_ff @ (posedge Clk)
+begin
+	if(Reset)
+		assign 
+
+end		
+
+endmodule

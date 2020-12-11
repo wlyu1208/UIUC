@@ -1,0 +1,11 @@
+module block (input Clk, Reset, fram_clk,
+				  input[9:0] DrawX, DrawY,
+				  output logic is_block,
+				  input[7:0] keycode);
+
+parameter[9:0] block_x_min=10'd160;
+parameter[9:0] block_x_max=10'd480;
+parameter[9:0] block_y_min=10'd0;
+parameter[9:0] block_y_max=10'd479;
+
+endmodule

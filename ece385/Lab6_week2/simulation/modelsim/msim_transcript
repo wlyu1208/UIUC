@@ -1,0 +1,318 @@
+# Reading D:/intelFPGA_lite/modelsim_ase/tcl/vsim/pref.tcl
+# do lc3part2_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying D:/intelFPGA_lite/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/two_one_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:06 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/two_one_mux.sv 
+# -- Compiling module two_mux
+# 
+# Top level modules:
+# 	two_mux
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/tristate.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/tristate.sv 
+# -- Compiling module tristate
+# 
+# Top level modules:
+# 	tristate
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/test_memory.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/test_memory.sv 
+# -- Compiling module test_memory
+# 
+# Top level modules:
+# 	test_memory
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/SLC3_2.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/SLC3_2.sv 
+# -- Compiling package SLC3_2
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/Mem2IO.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/Mem2IO.sv 
+# -- Compiling module Mem2IO
+# 
+# Top level modules:
+# 	Mem2IO
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/ISDU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/ISDU.sv 
+# -- Compiling module ISDU
+# 
+# Top level modules:
+# 	ISDU
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/HexDriver.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/HexDriver.sv 
+# -- Compiling module HexDriver
+# 
+# Top level modules:
+# 	HexDriver
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/four_one_mux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/four_one_mux.sv 
+# -- Compiling module four_mux
+# 
+# Top level modules:
+# 	four_mux
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/flip_flop.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/flip_flop.sv 
+# -- Compiling module flip_flop
+# -- Compiling module ff_3bit
+# -- Compiling module LED_12
+# -- Compiling module ben_ff
+# 
+# Top level modules:
+# 	flip_flop
+# 	ff_3bit
+# 	LED_12
+# 	ben_ff
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:07 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/adder.sv 
+# -- Compiling module sixteen_adder
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	sixteen_adder
+# End time: 21:07:07 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/ALU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/ALU.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/sext 11.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/sext 11.sv 
+# -- Compiling module sext11
+# 
+# Top level modules:
+# 	sext11
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/sext 8.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/sext 8.sv 
+# -- Compiling module sext8
+# 
+# Top level modules:
+# 	sext8
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/sext 6.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/sext 6.sv 
+# -- Compiling module sext6
+# 
+# Top level modules:
+# 	sext6
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/sext 5.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/sext 5.sv 
+# -- Compiling module sext5
+# 
+# Top level modules:
+# 	sext5
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/register file.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/register file.sv 
+# -- Compiling module Reg_f
+# 
+# Top level modules:
+# 	Reg_f
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/ben with nzp.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/ben with nzp.sv 
+# -- Compiling module nzp_logic
+# 
+# Top level modules:
+# 	nzp_logic
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/slc3.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/slc3.sv 
+# -- Compiling module slc3
+# 
+# Top level modules:
+# 	slc3
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/memory_contents.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:08 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/memory_contents.sv 
+# -- Compiling package memory_contents_sv_unit
+# -- Importing package SLC3_2
+# -- Compiling module memory_parser
+# 
+# Top level modules:
+# 	memory_parser
+# End time: 21:07:08 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:09 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 21:07:09 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/lab6_toplevel.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:09 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/lab6_toplevel.sv 
+# -- Compiling module lab6_toplevel
+# 
+# Top level modules:
+# 	lab6_toplevel
+# End time: 21:07:09 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vlog -sv -work work +incdir+D:/ECE385/lab6\ week2 {D:/ECE385/lab6 week2/testbench.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 21:07:09 on Mar 05,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+D:/ECE385/lab6 week2" D:/ECE385/lab6 week2/testbench.sv 
+# -- Compiling module testbench
+# 
+# Top level modules:
+# 	testbench
+# End time: 21:07:09 on Mar 05,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs="+acc"  testbench
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneive_ver -L rtl_work -L work -voptargs=""+acc"" testbench 
+# Start time: 21:07:09 on Mar 05,2019
+# Loading sv_std.std
+# Loading work.testbench
+# Loading work.lab6_toplevel
+# Loading work.slc3
+# Loading work.test_memory
+# Loading work.SLC3_2
+# Loading work.memory_contents_sv_unit
+# Loading work.memory_parser
+# Loading work.HexDriver
+# Loading work.datapath
+# Loading work.four_mux
+# Loading work.two_mux
+# Loading work.flip_flop
+# Loading work.nzp_logic
+# Loading work.ff_3bit
+# Loading work.ben_ff
+# Loading work.sext11
+# Loading work.sext8
+# Loading work.sext6
+# Loading work.sixteen_adder
+# Loading work.adder
+# Loading work.sext5
+# Loading work.ALU
+# Loading work.Reg_f
+# Loading work.LED_12
+# Loading work.Mem2IO
+# Loading work.tristate
+# Loading work.ISDU
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/adder.sv(5): [PCDPC] - Port size (1) does not match connection size (32) for port 'z'. The port definition is at: D:/ECE385/lab6 week2/adder.sv(26).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/addtwo/a0 File: D:/ECE385/lab6 week2/adder.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 's0'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 's1'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 'out'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 's0'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 's1'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'out'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 2000 ns
+do wave.do
+restart -f
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/adder.sv(5): [PCDPC] - Port size (1) does not match connection size (32) for port 'z'. The port definition is at: D:/ECE385/lab6 week2/adder.sv(26).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/addtwo/a0 File: D:/ECE385/lab6 week2/adder.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 's0'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 's1'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(42): [PCDPC] - Port size (16) does not match connection size (3) for port 'out'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/drm File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 's0'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 's1'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+# ** Warning: (vsim-3015) D:/ECE385/lab6 week2/datapath.sv(43): [PCDPC] - Port size (16) does not match connection size (3) for port 'out'. The port definition is at: D:/ECE385/lab6 week2/two_one_mux.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /testbench/L6/my_slc/d0/sr1m File: D:/ECE385/lab6 week2/two_one_mux.sv
+run 2000ns
+run 4000ns
+# WARNING: No extended dataflow license exists
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# Error: invalid command name "::.main_pane.dataflow.interior.cs.body.pw.df.c"
+# End time: 21:31:05 on Mar 05,2019, Elapsed time: 0:23:56
+# Errors: 2, Warnings: 15

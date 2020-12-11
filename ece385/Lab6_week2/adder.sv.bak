@@ -1,0 +1,6 @@
+module adder(input logic x, y, z,
+				 output logic s, cout);
+assign s=x^y^z;
+assign cout=(x&y)|(x&z)|(y&z);
+				 
+endmodule

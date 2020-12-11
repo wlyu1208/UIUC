@@ -1,0 +1,11 @@
+module ben_logic(input logic NZP, nzp,
+					  output logic out);
+					  
+always_comb
+begin
+	if(NZP&nzp)
+		out=1'b1;
+	else
+		out=1'b0;
+end
+endmodule
